@@ -1,1 +1,1 @@
-Line from branch A
+Line from branch B
