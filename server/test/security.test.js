@@ -12,7 +12,7 @@ const post = (path, body) => fetch(base + path, {
 
 test('health check works', async () => {
   const res = await fetch(base + '/api/health');
-  assert.strictEqual(res.status, 200);
+  assert.strictEqual(res.status,999);
 });
 
 test('Helmet security headers are present', async () => {
