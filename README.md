@@ -82,3 +82,4 @@ Save the "before" report, fix 4+ items (alt text, image size/WebP, meta descript
 - [ ] `git log --graph` screenshot, red and green CI screenshots
 - [ ] Lighthouse before/after scores
 - [ ] Live site on desktop + mobile (DevTools device mode) in Chrome, Firefox, Edge
+Feature page added on a branch
