@@ -6,8 +6,7 @@ import Feedback from './pages/Feedback.jsx';
 import Login from './pages/Login.jsx';
 
 // Lazy loading: the Gallery code downloads only when someone opens /gallery
-const Gallery = lazy(() => import('./pages/Gallery.jsx'));
-
+   import Gallery from './pages/Gallery.jsx';
 export default function App() {
   const { user, logout } = useAuth();
   return (

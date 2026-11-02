@@ -86,8 +86,10 @@ app.post('/api/auth/login', authLimiter, async (req, res) => {
 app.post('/api/auth/logout', (_req, res) => {
   res.clearCookie('token', { ...cookieOptions, maxAge: undefined }).json({ ok: true });
 });
-app.get('/api/auth/me', requireAuth, (req, res) => res.json({ name: req.user.name }));
-
+app.get('/api/auth/me', (req, res) => {
+  try { res.json({ name: jwt.verify(req.cookies.token, JWT_SECRET).name }); }
+  catch { res.json({ name: null }); }
+});
 app.get('/api/feedback', async (_req, res) => {
   res.json(await Feedback.find().sort({ createdAt: -1 }).limit(50));
 });
